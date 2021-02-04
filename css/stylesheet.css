@@ -1,0 +1,166 @@
+/* CSS Document */
+
+
+.small_head{color:#CC0000; font-weight:bold;}
+.small_head1{color:#006699; font-weight:bold;}
+.top_link{color:#FFFFFF;}
+.top:link, .top:visited{color:#FFFFFF; text-decoration:none;}
+.top:hover{color:#00CCFF; text-decoration:underline;}
+.main_cont{text-align:justify;}
+
+.footer:link, .footer:visited{color:#FFFFFF; text-decoration:none;}
+.footer:hover{color:#FFCC00; text-decoration:underline;}
+
+.mail:link, .mail:visited{color:#CC0000; text-decoration:none;}
+.mail:hover{color:#006699; text-decoration:underline;}
+
+.tab:link, .tab:visited{color:#333333; text-decoration:none;}
+.tab:hover{color:#003399; text-decoration:underline;}
+.btn
+{width:100px;
+height:27px;
+background-image:url(images/btn.jpg);
+background-repeat:no-repeat;
+text-align:center;
+color:#0c3e74;
+font-weight:bold;
+}
+.text
+{
+color:#0c3e74;
+font-weight:bold;
+}
+.message
+{
+color:Red;
+font-weight:bold;
+text-align:center;
+font-size:12px;
+font-family:Verdana;
+}
+
+.headerStyle
+{font-family: "BankGothic Md BT", Verdana, Arial, Helvetica, sans-serif;
+	FONT-WEIGHT: bold;  COLOR: #033F81;  vertical-align:middle; text-align:center;
+font-size:18px;
+color:#336799;
+border-bottom:1px solid #a9cde4;
+}
+.tableStyle
+{
+    border:1px solid #A7CBE5;
+    margin-left:0px;
+    margin-right:0px;
+	width: 519px;
+}
+.pagehead
+{font-family: "BankGothic Md BT", Verdana, Arial, Helvetica, sans-serif;
+	FONT-WEIGHT: bold;  COLOR: #033F81;  vertical-align:middle; text-align:center;
+font-size:18px;
+color:#336799;
+border-bottom:1px solid #a9cde4;
+}
+.pageheadChild
+{font-family: "BankGothic Md BT", Verdana, Arial, Helvetica, sans-serif;
+	FONT-WEIGHT: bold;  COLOR: #033F81;  vertical-align:left; text-align:left;
+font-size:14px;
+color:#336799;
+
+}
+
+.textbox{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 190px;
+	border: 1px solid #999999;
+}
+.textboxDate{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 168px;
+	border: 1px solid #999999;
+}
+.dropdown{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 193px;
+	border: 1px solid #999999;
+}
+.Errmsg
+{
+color:Red ;
+font-size :10px;
+}
+.GridviewUI 
+{
+background-color:white;
+font-size:11px;
+width : auto;
+height: auto;
+}
+
+
+.GridAltRowUI
+{
+background-color:#EFEFEF;
+color:black;
+font-size:11px;
+font-family:Arial, Sans-Serif;
+}
+
+.GridSelectedRowUI
+{
+background-color:Orange;
+color:White;
+font-size:11px;
+font-family:Arial, Sans-Serif;
+}
+.GridViewHeaderUI
+{
+background-color:#5377A9;
+color:white;
+font-size:11px;
+font-family:Arial, Sans-Serif;
+font-weight:bold;
+} 
+.GridViewHeaderUI A:Link
+{
+text-decoration:underline;
+color:White;
+}
+.GridViewHeaderUI A:hover
+{
+text-decoration:underline;
+color:White;
+}
+.GridRowUI
+{
+background-color:#f7f6f3;
+color:black;
+font-size:11px;
+font-family:Arial, Sans-Serif; 
+} 
+.frm_box
+{
+    border:3px solid #A7CBE5;
+    margin-left:35px;
+    margin-right:35px;
+}
+.mGrid { background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+    .mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+    .mGrid th { padding: 4px 2px; color: #fff; background: #424242 url(grd_head.png) repeat-x top; border-left: solid 1px #525252; font-size: 0.9em; }
+.mGrid .alt { background: #fcfcfc url(grd_alt.png) repeat-x top; }
+.mGrid .pgr {background: #424242 url(grd_pgr.png) repeat-x top; }
+    .mGrid .pgr table { margin: 5px 0; }
+    .mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }   
+    .mGrid .pgr a { color: #666; text-decoration: none; }
+    .mGrid .pgr a:hover { color: #000; text-decoration: none; }

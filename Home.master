@@ -1,0 +1,224 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<script runat="server">
+    
+    commoncontrol cmn = new commoncontrol();
+    
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("home.aspx");
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+        
+        //lblDate.Text = "          Login Date " + Session["dlv"] + "          ||";
+
+        //lbltype.Text = "Type-> " + Session["role"].ToString();
+
+        //if (Session["role"] == "User")
+        //{
+        //    TD1.Visible = false;
+        //    TD4.Visible = false;
+        //    TD6.Visible = false;
+        //    TD9.Visible = false;
+        //    TD10.Visible = false;
+        //    TD8.Visible = false;
+        //    TD12.Visible = false;
+        //    TD22.Visible = false;
+        //    TD23.Visible = false;
+            
+        //}
+     
+        
+       
+    }
+
+
+   
+
+
+    
+    
+    
+  
+
+
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>Student Admission System</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+<link rel="style" type="text/css" href="CSS/style.css" />
+
+<%--<link rel="stylesheet" type="text/css" href="css/Control.css" />--%>
+
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/validation.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+        <style type="text/css">
+            .style12
+            {
+                height: 21px;
+                width: 843px;
+            }
+            .style24
+            {
+                width: 5px;
+            }
+            .style9
+        {
+            }
+            .style25
+            {
+                width: 108px;
+            }
+            .style28
+            {
+                width: 60%;
+                height: 602px;
+            }
+            .style29
+            {
+                width: 5px;
+                height: 602px;
+            }
+            .style30
+            {
+            }
+            .style31
+            {
+                width: 100%;
+            }
+            </style>
+</head>
+
+<body>
+
+
+    <form id="form1" runat="server">
+    <div align="center" style="width: 100%; background-color: #CCCCCC;">
+
+     <table align="center" border="0" cellpadding="0" cellspacing="0" width="974" 
+            bgcolor="White">
+         <tr>
+             <td valign="top" colspan="3">
+                    <table bgcolor="White" style="width: 100%">
+                        <tr>
+                            <td class="style9">
+              <img src="images/header2.jpg" style="width: 1000px; height: 75px" /></td>
+                        </tr>
+                                    </table>
+                 </td>
+             </tr>
+         <tr bgcolor="#0099FF">
+             <td valign="top" colspan="3" class="style30">
+                                                         <asp:Menu ID="Menu1" runat="server" BackColor="#FF9900" 
+                                                             DynamicHorizontalOffset="2" 
+                        Font-Names="Verdana" Font-Size="0.8em" 
+                                                             ForeColor="#7C6F57" Height="16px" Orientation="Horizontal" 
+                                                             StaticSubMenuIndent="10px" 
+                        Width="100%" Font-Bold="True">
+                                                             <StaticSelectedStyle BackColor="#5D7B9D" />
+                                                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                                             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                                             <DynamicMenuStyle BackColor="#F7F6F3" />
+                                                             <DynamicSelectedStyle BackColor="#5D7B9D" />
+                                                             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                                             <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                                             <Items>
+                                                                 <asp:MenuItem NavigateUrl="~/login.aspx" Text="Home" Value="Home">
+                                                                 </asp:MenuItem>
+                                                                 <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="About Us">
+                                                                 </asp:MenuItem>
+                                                                 <asp:MenuItem NavigateUrl="~/enquiry.aspx" Text="Enquiry" Value="Enquiry">
+                                                                 </asp:MenuItem>
+                                                             </Items>
+                                                         </asp:Menu>
+                </td>
+             </tr>
+         <tr>
+             <td valign="middle" class="style30">
+                 <asp:Image ID="Image4" runat="server" 
+                     ImageUrl="~/images/Mozilla-digilearning-infographic.gif" Width="293px" />
+                 </td>
+                 <td valign="top" colspan="1" class="style28">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                     <table class="style31">
+                         <tr>
+                             <td>
+                                 &nbsp;</td>
+                             <td>
+                                 &nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td align="left" colspan="2" valign="top">
+                                 <h1 class="title">
+                                     About Us</h1>
+                                 <div class="content-middle">
+                                     <div class="node">
+                                         <div class="content">
+                                             <p>
+                                                 The Digital Literacy portal is an initiative of the Obama Administration to 
+                                                 serve as a valuable resource to practitioners who are delivering digital 
+                                                 literacy training and services in their communities. As more and more jobs and 
+                                                 educational offerings are available online, the ability to navigate the Internet 
+                                                 is critical to participate more fully in the economy. Jumpstarted by a federal 
+                                                 interagency working group dedicated to spurring the advancement of digital 
+                                                 literacy across all age groups and stages of learning, the Digital Literacy 
+                                                 portal organizes content conveniently, enables valuable discussion and 
+                                                 collaboration among users and elevates best practices to improve the quality of 
+                                                 digital literacy offerings. We invite users to share their content and their 
+                                                 ideas to make the portal more robust and to fulfill its role as a destination 
+                                                 for practitioners devoted to enhancing digital opportunity for all Americans.</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 &nbsp;</td>
+                             <td>
+                                 &nbsp;</td>
+                         </tr>
+                     </table>
+                 </asp:ContentPlaceHolder>
+                 </td>
+                 <td align="right" valign="top" colspan="1" class="style29">
+                     <table align="center">
+                         <tr>
+                             <td align="center">
+                                 &nbsp;</td>
+                         </tr>
+                         </table>
+                             </td>
+             </tr>
+             <tr>
+                 <td class="style12" colspan="4" 
+                     style="background-color: #006699; color: #FFFF66;" align="left">
+                     Best viewed in 1024X768</td>
+         </tr>
+             <tr>
+                 <td colspan="2" class="style25">
+                     &nbsp;</td>
+                 <td class="style24">
+                     &nbsp;</td>
+             <td>
+                 &nbsp;</td>
+         </tr>
+     </table>
+    </div>
+    </form>
+</body>
+</html>

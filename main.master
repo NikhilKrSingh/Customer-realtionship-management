@@ -1,0 +1,367 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        Response.Redirect("login.aspx");
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        // lblName.Text = "User-> " + Session["fullname"] ;
+        //lblDate.Text = "          Login Date " + Session["dlv"] + "          ||";
+        // lbltype.Text = "Type-> " + Session["role"].ToString();
+
+
+        lblName.Text = "Welcome " + Session["fullname"] + " | " + Session["role"].ToString() + " | ";
+
+
+
+        if (Session["role"] == "Employee")
+        {
+            TD1.Visible = false;
+            TD2.Visible = false;
+            TD3.Visible = false;
+            TD4.Visible = false;
+            TD5.Visible = false;
+            TD6.Visible = false;
+            TD7.Visible = false;
+            TD8.Visible = false;
+            TD9.Visible = false;
+            TD10.Visible = false;
+            TD11.Visible = false;
+            TD12.Visible = false;
+            TD13.Visible = false;
+            TD14.Visible = false;
+            TD15.Visible = false;
+            TD16.Visible = false;
+            TD17.Visible = false;
+            TD18.Visible = false;
+            Menu1.Visible = false;
+        }
+        else
+        {
+            Menu2.Visible = false;
+        }
+        
+        //else if   (Session["role"] == "Parent")
+        //{
+        //    //TD1.Visible = false;
+        //    //TD4.Visible = false;
+        //    TD5.Visible = false;
+        //   // TD6.Visible = false;
+        //    //TD7.Visible = false;
+        //    //TD8.Visible = false;
+        //    //TD9.Visible = false;
+        //    //TD10.Visible = false;
+        //    TD11.Visible = false;
+        //    TD2.Visible = false;
+        //    TD3.Visible = false;
+        //    TD12.Visible = false;
+        //    TD13.Visible = false;
+            
+        //    TD17.Visible = false;
+        //    TD18.Visible = false;
+        //    TD19.Visible = false;
+        //    Menu1.Visible = false;
+        //}
+    }
+
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("changepassword.aspx");
+    }
+
+    protected void LinkButton3_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("edituser.aspx");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>IMED </title>
+  <script type="text/javascript" src="jscript/jscript.js" ></script>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+        <style type="text/css">
+            .style1
+            {
+                height: 32px;
+            }
+            .style2
+            {
+                height: 16px;
+                width: 300px;
+            }
+            .style3
+            {
+                width: 100%;
+            }
+        </style>
+        </head>
+
+<body bgcolor="#CCCCCC">
+
+
+<form runat=server style="width: auto">
+
+     <table width="100%">
+         <tr>
+             <td align="center">
+
+     <table align="center" bgcolor="White" style="height: 350px">
+        <tr>
+          <td class="style2">
+              <img src="images/imed_logo.jpg" style="width: 198px; height: 60px" align="left" /></td>
+          <td width="100" class="style2">
+              &nbsp;</td>
+          <td width="100" class="style2" align="right">
+                        <asp:Label ID="lblName" runat="server" Font-Bold="True" 
+                  Font-Names="Arial Narrow" ForeColor="#3399FF"></asp:Label>
+              <asp:LinkButton ID="LinkButton2" runat="server" Font-Bold="True" 
+                  Font-Names="Arial Narrow" ForeColor="#CC0000" onclick="LinkButton2_Click">Change Password | </asp:LinkButton>
+             <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
+                  OnClick="LinkButton1_Click" Font-Bold="True" Font-Names="Arial Narrow" 
+                  ForeColor="Red">Logout </asp:LinkButton>
+              <br />
+                        <asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click" 
+                            Font-Bold="True" Font-Names="Arial Narrow" ForeColor="#3399FF">Edit Profile</asp:LinkButton>
+              <br />
+             </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="style1">
+              <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                  BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                  Font-Size="Large" ForeColor="#284E98" StaticSubMenuIndent="10px" 
+                  Width="100%" Font-Bold="True" BorderWidth="1px">
+                  <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                  <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                  <DynamicMenuStyle BackColor="#B5C7DE" />
+                  <DynamicSelectedStyle BackColor="#507CD1" />
+                  <Items>
+                      <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                      </asp:MenuItem>
+                      <asp:MenuItem Text="CRM Master" Value="College">
+                          <asp:MenuItem NavigateUrl="~/DepartmentMaster.aspx" Text="Department Master" 
+                              Value="Department Master"></asp:MenuItem>
+                          <asp:MenuItem Text="Service Master" 
+                              Value="Service Master" NavigateUrl="~/ServiceMaster.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Email Setup" 
+                              Value="Email Setup" NavigateUrl="~/EmailSetup.aspx"></asp:MenuItem>
+                          <asp:MenuItem NavigateUrl="~/viewenquiry.aspx" Text="View Enquiry" 
+                              Value="View Enquiry"></asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem Text="Customer" 
+                          Value="Customer">
+                          <asp:MenuItem Text="Customer Master" 
+                              Value="Customer Master" NavigateUrl="~/CustomerMaster.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Customer History" 
+                              Value="Customer History" NavigateUrl="~/CustomerHistory.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Contact Customer" 
+                              Value="Contact Customer" NavigateUrl="~/ContactCustomer.aspx"></asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem Text="Employee" Value="Employee">
+                          <asp:MenuItem NavigateUrl="~/EmployeeMaster.aspx" Text="Employee Master" 
+                              Value="Employee Master"></asp:MenuItem>
+                          <asp:MenuItem NavigateUrl="~/EmployeeSalary.aspx" Text="Employee salary" 
+                              Value="Employee salary"></asp:MenuItem>
+                          <asp:MenuItem NavigateUrl="~/EmpAttendanceFor.aspx" Text="Employee Attendance" 
+                              Value="Employee Attendance"></asp:MenuItem>
+                          <asp:MenuItem NavigateUrl="~/EmpAttendanceReport.aspx" Text="Employee Attendance Report" 
+                              Value="Employee Attendance Report"></asp:MenuItem>
+                          <asp:MenuItem Text="Add Employee Login Account" 
+                              Value="Add Employee Login Account" NavigateUrl="~/AddEmpLogin.aspx"></asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem Text="CRM Tools" 
+                          Value="CRM Tools">
+                          <asp:MenuItem Text="New Job Card" 
+                              Value="New Job Card" NavigateUrl="~/NewJobCard.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Assign Job No To Employee" 
+                              Value="Assign Job No To Employee" NavigateUrl="~/AssignJobCard.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Enter Service Details" 
+                              Value="Enter Service Details" NavigateUrl="~/EnterServiceDetail.aspx"></asp:MenuItem>
+                          <asp:MenuItem Text="Payment" 
+                              Value="Payment" NavigateUrl="~/JobCardPayment.aspx"></asp:MenuItem>
+                          <asp:MenuItem 
+                              Text="Open Job Card Status" Value="Open Job Card Status" 
+                              NavigateUrl="~/OpenJobCard.aspx">
+                          </asp:MenuItem>
+                          <asp:MenuItem Text="Payment Report" 
+                              Value="Payment Report" NavigateUrl="~/PaymentReport.aspx"></asp:MenuItem>
+                          <asp:MenuItem NavigateUrl="~/JobCardAssignmentStatus.aspx" 
+                              Text="Job Card Assignment Satus" Value="Job Card Assignment Satus">
+                          </asp:MenuItem>
+                      </asp:MenuItem>
+                  </Items>
+                  <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                  <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                  <StaticSelectedStyle BackColor="#507CD1" />
+              </asp:Menu>
+              <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" 
+                  BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                  Font-Size="Large" ForeColor="#284E98" StaticSubMenuIndent="10px" 
+                  Width="100%" Font-Bold="True" BorderWidth="1px">
+                  <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                  <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                  <DynamicMenuStyle BackColor="#B5C7DE" />
+                  <DynamicSelectedStyle BackColor="#507CD1" />
+                  <Items>
+                      <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home">
+                      </asp:MenuItem>
+                      <asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem>
+                      </asp:MenuItem>
+                      <asp:MenuItem Text="  ">
+                      </asp:MenuItem>
+                  </Items>
+                  <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                  <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                  <StaticSelectedStyle BackColor="#507CD1" />
+              </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+        <td bgcolor="#ffffff" valign="top" style="background-color: #ffffff;" align="left" 
+                width="221 px">
+            <table class="style3">
+                <tr>
+                    <td style="height: 540px; width: 221px;" valign="top">
+            <table style="width: 221px; " frame="void">
+                <tr>
+                    <td style="width: 112px; height: 2px; background-color: #ffffff" align="center">
+                        <h3>CRM Tools</h3></td>
+                </tr>
+               
+               
+ 
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD1" runat="server">
+                     <a href="DepartmentMaster.aspx">Department Master</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD2" runat="server">
+                     <a href="ServiceMaster.aspx">Service Master</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD3" runat="server">
+                     <a href="EmailSetup.aspx">Email Setup</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD4" runat="server">
+                        <a href="viewenquiry.aspx">View Customer Enquiry</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD5" runat="server">
+                     <a href="CustomerMaster.aspx">Customer Master</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD6" runat="server">
+                     <a href="CustomerHistory.aspx">Customer History</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD7" runat="server">
+                     <a href="ContactCustomer.aspx">Contact Customer</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD8" runat="server">
+                     <a href="EmployeeMaster.aspx">Employee Master</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD9" runat="server">
+                     <a href="EmployeeSalary.aspx">Employee Salary</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD10" runat="server">
+                     <a href="EmpAttendanceFor.aspx">Employee Attendance</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD11" runat="server">
+                     <a href="EmpAttendanceReport.aspx">AttendanceReport</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD12" runat="server">
+                     <a href="AddEmpLogin.aspx">Add Employee Login</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD13" runat="server">
+                     <a href="NewJobCard.aspx">New Job Card</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD14" runat="server">
+                     <a href="AssignJobCard.aspx">Assign Job Card</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD15" runat="server">
+                     <a href="EnterServiceDetail.aspx">Enter Service Detail</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD16" runat="server">
+                     <a href="JobCardPayment.aspx">Payment</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD17" runat="server">
+                     <a href="OpenJobCard.aspx">Open Job Cards</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD18" runat="server">
+                        <a href="PaymentReport.aspx">Payment Report</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD19" runat="server">
+                     <a href="Default.aspx">My Pending Job Card</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD20" runat="server">
+                     <a href="EmpOpenJobCard.aspx">My Job Card Report</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; width: 112px; border-right: #000000 thin solid; border-top: #000000 thin solid; border-left: #000000 thin solid; border-bottom: #000000 thin solid; " 
+                        id="TD21" runat="server">
+                     <a href="EmployeeEnquiry.aspx">Enquiry</a></td>
+                </tr>
+
+               
+            </table>
+                                 </td>
+                </tr>
+            </table>
+                                 <br />
+            </td>
+             <td valign="top" height="0" width="779" colspan="2">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+             </td>
+          </tr>
+        </table>
+             </td>
+         </tr>
+     
+    </form>
+</body>
+</html>

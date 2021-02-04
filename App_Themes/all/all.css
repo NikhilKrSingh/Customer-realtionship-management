@@ -1,0 +1,10 @@
+﻿body {font:10pt verdana}
+h1 {font:700 30pt arial;color:red;letter-spacing:10pt;background-color:#dddddd; text-align:center}
+h2 {font:700 20pt arial;color:Navy}
+h3 {font:700 16pt arial;color:Navy}
+h4 {font:700 12pt verdana;color:red}
+td {font:10pt verdana}
+
+a:link {font:10pt verdana;color:navy}
+a:visited {font:10pt verdana;color:navy}
+a:hover {font:700 10pt verdana;color:red;}
